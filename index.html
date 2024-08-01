@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -16,13 +16,16 @@
                         bg: '#12141d',
                         buttons: '#ff664f',
                         light_red: '#ff7f7f',
+                        light_black: 'rgba(0, 0, 0, 0.178)',
+                        text: '#272932',
+                        borders: '#313339'
                     },
                     backgroundImage: {
                         'gradient-red': 'radial-gradient(circle, rgba(255, 0, 0, 0.089) 0%, #12141d 60%)',
                         'gradient-orange': 'linear-gradient(to top right, #dd9172, #f35c45)',
-                        'custom-bg': "url('/Icons/bg.png')",
+                        'custom-bg': "linear-gradient(to top right, #dd9172, #eb391e)",
                         'button-background': 'linear-gradient(90deg, #FF7763 100%, #EA6955 100%)'
-                    },
+                    }
 
                 }
             }
@@ -33,28 +36,10 @@
 
 <body class="bg-bg">
     <!-- navbar starts -->
-    <nav>
-        <div class="navbar md:pr-24 md:pl-24 pl-0 pr-0">
+    <nav class="fixed w-full z-50 bg-bg ">
+        <div class="navbar md:pr-24 md:pl-24 pl-2 pr-0 ">
             <div class="navbar-start w-[40%]">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>Features</a></li>
-                        <li><a>Pricing</a></li>
-                        <li><a>How it works</a></li>
-                        <li><a>Knowledge base</a></li>
-                        <li><a>FAQ</a></li>
-                        <li><a>Sign up</a></li>
-                        <li><a>Sign in</a></li>
-                    </ul>
-                </div>
+
                 <a class="btn btn-ghost text-xl text-white">Nettracking</a>
                 <label class="grid cursor-pointer place-items-center">
                     <input type="checkbox" value="synthwave"
@@ -82,23 +67,42 @@
                     <li><a>FAQ</a></li>
                 </ul>
             </div>
-            <div class="md:w-full flex justify-end ">
-                <a class="btn lg:mr-2 mr-0 hidden md:block pt-4 bg-[#1D1F29] border-none text-white font-bold">Sign
-                    in</a>
-                <a class="btn  hidden md:block pt-4 font-bold">Sign up</a>
+            <div class="md:w-full flex justify-end navbar-end">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden border">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white absolute ml-[35px] mt-[5px]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="relative right-[-25px] menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ">
+                        <li><a>Features</a></li>
+                        <li><a>Pricing</a></li>
+                        <li><a>How it works</a></li>
+                        <li><a>Knowledge base</a></li>
+                        <li><a>FAQ</a></li>
+                        <li><a>Sign up</a></li>
+                        <li><a>Sign in</a></li>
+                    </ul>
+                </div>
+                <a class=" btn lg:mr-2 mr-0 hidden md:block pt-4">Sign up</a>
+                <a class=" btn  hidden md:block pt-4">Sign in</a>
             </div>
         </div>
     </nav>
     <!-- Navbar Ends -->
 
     <!-- Header Starts -->
-    <header class="gradient-red">
+    <header class="gradient-red ">
         <!-- red back -->
-        <div class="md:h-[540px] md:w-[600px] bg-gradient-red rounded-full absolute md:top-[30%] md:left-[15%]">
+        <div
+            class="md:h-[480px] h-[490px] w-[340px] md:w-[700px] bg-gradient-red rounded-full absolute md:top-[30%] md:left-[15%]  top-[15%] left-[4%] ">
         </div>
         <!-- red back end -->
         <div class="relative">
-            <div class="flex justify-center text-center mt-20 pb-20">
+            <div class="flex justify-center text-center md:pt-40 pt-20 pb-20">
                 <div class="md:w-[50%] p-5">
                     <h1 class="md:text-4xl text-3xl text-white font-bold"> Content marketing solution & <br>
                         idea of your business</h1>
@@ -118,28 +122,31 @@
 
                 </div>
             </div>
+
             <!-- key feature title  -->
-            <!-- <div class="text-center mt-10">
+            <div class="text-center md:mt-5">
                 <h1 class="text-white text-3xl font-bold">Key Features</h1>
                 <p class="text-[#808188] mt-3 mb-10 md:w-1/3 w-3/4 mx-auto">NetTracking™ has quickly become the go-to
                     content marketing solution for over 600 clients around the world</p>
-            </div> -->
+            </div>
             <!-- key feature title  end-->
         </div>
+
     </header>
     <!-- Header ends -->
 
     <!-- Feature section Starts -->
-    <section>
-        <div class="text-center">
+    <section class="mt-16">
+
+        <!-- <div class="text-center">
             <h1 class="text-white text-3xl font-bold">Key Features</h1>
-            <p class="text-[#808188] mt-3 mb-10 md:w-1/3 w-3/4 mx-auto">NetTracking™ has quickly become the go-to
-                content marketing solution for over 600 clients around the world</p>
-        </div>
+            <p class="text-[#808188] mt-3 mb-10 md:w-1/3 w-3/4 mx-auto">NetTracking™ has quickly become the go-to content marketing solution for over 600 clients around the world</p>
+        </div> -->
+
         <!-- 6 feature -->
         <div class="bg-[#1E2029] md:w-3/4 mx-auto p-1 rounded-lg ">
             <div class="md:w-4/5 mx-auto">
-                <div class="grid grid-cols-2 md:grid-cols-3 mb-20 mt-20 md:gap-20 md:ml-12">
+                <div class="grid grid-cols-2 md:grid-cols-3 mb-10 mt-20 md:gap-20 md:ml-12">
                     <!-- 1st box -->
                     <div class="md:ml-0 ml-3">
                         <img src="Icons/1.png" alt="">
@@ -187,62 +194,91 @@
             </div>
         </div>
     </section>
-    <!-- Feature section ends -->
+    <!-- Feature section End -->
 
     <!-- What we do start  -->
-    <section class="mt-28">
+    <section class="mt-28 p-3">
         <div class="flex justify-center">
             <div class="text-center">
-                <h1 class="text-4xl text-white font-bold">Creative solution to expand <br> your business!</h1>
-                <p class="mt-5 text-lg text-[#808188] ">Nettracking is designed with an integrated tracking system that
+                <h1 class="md:text-4xl md:block hidden text-white font-bold">Creative solution to expand <br> your
+                    business!</h1>
+                <h1 class="md:hidden block text-3xl text-white font-bold">Creative solution to expand your business!
+                </h1>
+                <p class="mt-5 md:text-lg text-[#808188] text-sm">Nettracking is designed with an integrated tracking
+                    system that
                     <br> allows customers to track their package
                 </p>
             </div>
         </div>
-        <div class="mt-20 md:flex justify-center gap-5">
-            <div class="md:w-[40%] w-[95%] md:mx-0 mx-auto md:h-[530px] rounded-xl bg-[#1E2029] md:p-10 p-5">
-                <div class="flex md:gap-2 gap-1 md:mt-0 mt-5">
-                    <button class="text-white bg-[#2a2c34] p-3 rounded-md w-24">
+        <div class="mt-20 md:flex justify-center gap-5 ">
+            <div class="md:w-[40%] md:h-[530px] h-[450px] rounded-xl bg-[#1E2029] md:p-10 p-5 mb-10 md:mb-0">
+                <div class="flex  gap-2 mt-5 md:mt-0">
+                    <button class="text-white bg-[#2a2c34] md:p-3 rounded-md md:w-24 p-2">
                         Founder
                     </button>
-                    <button class="text-white bg-[#2a2c34] p-3 rounded-md w-24">
+                    <button class="text-white bg-[#2a2c34] md:p-3 rounded-md md:w-24 p-2">
                         Blogger
                     </button>
-                    <button class="text-white bg-[#2a2c34] p-3 rounded-md w-24">
+                    <button class="text-white bg-[#2a2c34] md:p-3 rounded-md md:w-24 p-2">
                         Marketer
                     </button>
-                    <button class="text-white bg-[#2a2c34] p-3 rounded-md w-24">
+                    <button class="text-white bg-[#2a2c34] md:p-3 rounded-md md:w-24 p-2">
                         Agency
                     </button>
+
                 </div>
                 <div class="mt-20">
-                    <h1 class="text-4xl text-white">Track The Results Of <br> Your Work</h1>
-                    <p class="text-gray-500 mt-5 w-[90%]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <h1 class="md:text-4xl text-2xl text-white">Track The Results Of <br> Your Work</h1>
+                    <p class="text-gray-500 mt-5 w-[90%] text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.
                         Recusandae, ipsa non. Quaerat, animi. Nihil, earum fugit porro ad consequatur eos. Lorem ipsum,
                         dolor sit amet consectetur adipisicing elit. </p>
                 </div>
                 <button
-                    class="text-white flex items-center gap-2 bg-buttons p-3 rounded-xl w-52 flex justify-center mt-10 md:mb-0 mb-7">
+                    class="text-white flex items-center gap-2 bg-buttons p-3 rounded-xl md:w-52 flex justify-center mt-10">
                     Explore Platform <i class="fa-solid fa-arrow-right-long"></i>
                 </button>
             </div>
-            <div
-                class="md:w-[40%] w-[95%] md:mx-0 mx-auto md:h-[530px] rounded-xl bg-gradient-orange flex justify-center p-16 md:mt-0 mt-7">
-                <div>
-                    <div class="h-[70px] absolute w-[300px] mt-[25px] rounded-lg bg-[#ffffff] p-4">
+
+            <!-- slider static 3 buttons -->
+            <span
+                class="absolute h-[9px] w-[9px] bg-white rounded-full md:ml-[360px] ml-28     mt-[40px] cursor-pointer"></span>
+            <span
+                class="absolute h-[9px] w-[9px] bg-[#e58474] rounded-full md:ml-[390px] ml-32 mt-[40px] cursor-pointer"></span>
+            <span
+                class="absolute h-[9px] w-[9px] bg-[#e58474] rounded-full md:ml-[420px] ml-36 mt-[40px] cursor-pointer"></span>
+            <!-- slider static 3 buttons end-->
+
+            <div class="md:w-[40%] h-[530px] rounded-xl bg-gradient-orange flex justify-center p-16 overflow-hidden">
+
+                <button
+                    class=" w-[35px] h-[35px] rounded-full bg-[#f1592a] text-white absolute md:mr-[260px] mr-[210px] md:mt-[180px] mt-[182px]"><i
+                        class="fa-solid fa-chevron-down"></i></button>
+                <button
+                    class=" w-[35px] h-[35px] rounded-full bg-[#f1582a6e] text-[#ffffff4b] absolute md:mr-[260px] mr-[210px] md:mt-[316px] mt-[317px]"><i
+                        class="fa-solid fa-chevron-down"></i></button>
+                <div class="">
+                    <div
+                        class="h-[70px] absolute md:w-[300px] w-[250px] mt-[25px] rounded-lg bg-[#ffffff] p-4 ml-[14px] md:ml-0">
                         <h1 class="text-lg font-bold mb-[4px]">Good Morning, Cham</h1>
                         <span class="absolute h-[5px] w-20 bg-green-400 rounded-xl"></span>
                         <span class="absolute h-[5px] w-[25px] bg-red-400 rounded-xl ml-[90px]"></span>
                     </div>
-                    <div class=" h-[400px] w-[300px] ml-10 rounded-lg bg-[#f9f5f0] shadow-2xl">
+                    <div class=" h-[400px] md:w-[300px] w-[250px] ml-10 rounded-lg bg-[#f9f5f0] shadow-2xl">
                         <div class=" h-[120px] rounded-lg bg-[#f4705c]">
                         </div>
-                        <div class="pl-8 pt-5">
+
+
+
+
+                        <div class="md:pl-8 pl-6 pt-5 	">
                             <h1 class="text-lg font-bold">Monthly</h1>
-                            <p class="shadow-xl text-sm w-[230px] p-2 mt-3 bg-[#ffffff] rounded-md">Feb 28, 2024, 17:15
+                            <p class="shadow-xl text-sm md:w-[230px] w-[190px] p-2 mt-3 bg-[#ffffff] rounded-md">Feb 28,
+                                2024, 17:15
                             </p>
-                            <span class="absolute h-[6px] w-48 bg-gray-700 rounded-xl mt-4"></span>
+                            <span class="absolute h-[6px] md:w-48 w-36 bg-gray-700 rounded-xl mt-4"></span>
                             <span class="absolute h-[6px] w-20 bg-red-400 rounded-xl mt-8"></span>
+
                             <span class="absolute h-[6px] w-8 bg-orange-300 rounded-xl mt-12"></span>
                             <span class="absolute h-[6px] w-12 bg-orange-300 rounded-xl mt-12 ml-10"></span>
                             <span class="absolute h-[6px] w-10 bg-orange-300 rounded-xl mt-12 ml-24"></span>
@@ -250,13 +286,222 @@
 
                             <span class="absolute h-[6px] w-12 bg-orange-300 rounded-xl mt-16"></span>
                             <span class="absolute h-[6px] w-6 bg-orange-300 rounded-xl mt-16 ml-16"></span>
+
+                            <p
+                                class="shadow-2xl text-sm md:w-[230px] w-[190px] p-2 bg-[#f9f5f0] text-gray-300 rounded-md mt-[100px]">
+                                Feb 28, 2024, 17:15
+                            </p>
+                            <span class="absolute h-[6px] md:w-48 w-36 bg-light_black rounded-xl mt-4"></span>
+                            <div class="mt-5">
+                                <span class="absolute h-[6px] w-8 bg-[#fdbb743d] rounded-xl mt-12"></span>
+                                <span class="absolute h-[6px] w-12 bg-[#fdbb743d] rounded-xl mt-12 ml-10"></span>
+                                <span class="absolute h-[6px] w-10 bg-[#fdbb743d] rounded-xl mt-12 ml-24"></span>
+                                <span class="absolute h-[6px] w-5 bg-[#fdbb743d] rounded-xl mt-12 ml-36"></span>
+
+                                <span class="absolute h-[6px] w-12 bg-[#fdbb743d] rounded-xl mt-16"></span>
+                                <span class="absolute h-[6px] w-6 bg-[#fdbb743d] rounded-xl mt-16 ml-16"></span>
+                            </div>
+                            <p
+                                class="shadow-2xl text-sm md:w-[230px] w-[190px] p-2 bg-[#d1938288] text-gray-300 rounded-md mt-[101px]">
+                                Feb 28, 2024, 17:15
+                            </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
     <!-- What we do end  -->
+
+
+    <!-- How it works start -->
+    <section class="mt-16">
+        <div class="flex justify-center text-white text-3xl font-bold">
+            <h1>How it works</h1>
+        </div>
+        <div class="flex justify-center mt-20">
+            <div
+                class="md:w-[1100px]  md:h-[700px] bg-[#1E2029] rounded-xl md:pl-28 md:pt-16 md:pb-16 md:pr-28 flex md:justify-between justify-evenly  w-full">
+                <div class="hidden md:block">
+                    <div class="w-[302px] h-full flex flex-col justify-between">
+                        <div class=" w-[300px] flex justify-center p-3 rounded-xl bg-[#272932]">
+                            <img src="./Icons/card (3).png" alt="">
+                        </div>
+                        <div class="w-[300px] flex justify-end flex-col text-end">
+                            <h1 class="text-2xl text-white">Get Tracking Code</h1>
+                            <p class="text-gray-500 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptas
+                                natus ratione voluptate accusantium! Tempora placeat</p>
+                        </div>
+                        <div class=" w-[300px]  flex justify-center pr-8 rounded-xl bg-[#272932] overflow-hidden">
+                            <img class=" h-36 mt-5" src="./Icons/card (2).png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="md:w-[100px]  md:py-4 mt-8 md:mt-0">
+                    <div class="flex justify-center">
+                        <div
+                            class="border-b text-white font-bold text-lg md:w-[70px] md:h-[70px] w-[50px] h-[50px] rounded-full flex justify-center items-center bg-[#272932]">
+                            <h1>01</h1>
+                        </div>
+                    </div>
+
+                    <div class="text-white flex flex-col text-center">
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <!-- mobile -->
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400 md:hidden block">|</p>
+
+                        <!-- mobile -->
+                    </div>
+                    <div class="flex justify-center">
+                        <div
+                            class="border-b text-white font-bold text-lg md:w-[70px] md:h-[70px] w-[50px] h-[50px]  rounded-full flex justify-center items-center bg-[#272932]">
+                            <h1>02</h1>
+                        </div>
+                    </div>
+                    <div class="text-white flex flex-col text-center">
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <p class="text-[5px] text-gray-400">|</p>
+                        <!-- mobile -->
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <p class="text-[5px] text-gray-400  md:hidden block">|</p>
+                        <!-- mobile -->
+                    </div>
+                    <div class="flex justify-center">
+                        <div
+                            class="border-b text-white font-bold text-lg md:w-[70px] md:h-[70px] w-[50px] h-[50px]  rounded-full flex justify-center items-center bg-[#272932]">
+                            <h1>03</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="w-[302px] h-full flex flex-col justify-between ">
+                        <div class="w-[300px] flex justify-end flex-col mt-6">
+                            <h1 class="text-2xl text-white">Add Website</h1>
+                            <p class="text-gray-500 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptas
+                                natus ratione voluptate accusantium! Tempora placeat</p>
+                        </div>
+                        <div class=" w-[300px] flex justify-center p-3 rounded-xl bg-[#272932]">
+                            <img src="./Icons/card (1).png" alt="">
+                        </div>
+
+
+                        <div class="w-[300px] flex justify-end flex-col mb-6">
+                            <h1 class="text-2xl text-white">Start Tracking</h1>
+                            <p class="text-gray-500 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptas
+                                natus ratione voluptate accusantium! Tempora placeat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- mobile -->
+
+                <div class="block md:hidden mt-8">
+                    <div>
+                        <div class="w-[250px] h-[150px]  flex justify-center p-2 rounded-xl bg-[#272932]">
+                            <img class="" src="./Icons/card (3).png" alt="">
+                        </div>
+                        <div class="w-[250px] h-[140px] flex  flex-col">
+                            <h1 class="text-2xl text-white mt-2">Get Tracking Code</h1>
+                            <p class="text-gray-500 mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                natus ratione voluptate accusantium! Tempora placeat</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="w-[250px] h-[150px]  flex justify-center p-2 rounded-xl bg-[#272932]">
+                            <img class="" src="./Icons/card (1).png" alt="">
+                        </div>
+                        <div class="w-[250px] h-[150px] flex text-end  flex-col">
+                            <h1 class="text-2xl text-white mt-2">Get Tracking Code</h1>
+                            <p class="text-gray-500 mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Voluptas
+                                natus ratione voluptate</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="w-[250px] h-[150px]  flex justify-center p-2 rounded-xl bg-[#272932]">
+                            <img class="" src="./Icons/card (2).png" alt="">
+                        </div>
+                        <div class="w-[250px] h-[150px] flex   flex-col">
+                            <h1 class="text-2xl text-white mt-2">Get Tracking Code</h1>
+                            <p class="text-gray-500 mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Voluptas
+                                natus ratione voluptate</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How it works end -->
 
     <!-- Pricing Section Stats -->
     <Section class="mt-10 mb-10">
@@ -265,8 +510,8 @@
             <p class="text-[#696B76] lg:w-auto w-4/5 mx-auto">online sales tracker that tracks the success of your
                 online sales efforts.</p>
         </div>
-        <div class="mt-16">
-            <div class="md:flex md:w-3/5 w-4/5 mx-auto gap-5">
+        <div class="mt-16 flex justify-center">
+            <div class="md:flex md:w-3/5  mx-auto gap-5">
                 <div class="rounded-xl bg-[#1E2029] w-[300px] flex justify-center mb-5">
                     <div class="">
                         <h1 class="text-white text-2xl mb-3 mt-8">Free</h1>
@@ -332,8 +577,120 @@
     </Section>
     <!-- Pricing Section ends -->
 
+
+    <!-- Testimonial start -->
+    <section class="h-[500px] overflow-hidden relative">
+        <div class=" md:h-[450px] h-[410px]">
+            <div>
+                <div class="flex justify-center text-center mb-16">
+                    <div>
+                        <h1 class=" text-3xl text-white font-bold ">Testimonials</h1>
+                        <p class="text-[#696B76] p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                            cupiditate
+                            temporibus</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex gap-8 absolute md:pl-[10%] w-full md:w-auto justify-center">
+                <div class="md:h-72 h-[250px] md:w-[450px] w-[90%] rounded-xl bg-[#1E2029] md:p-7 p-5">
+                    <div class="flex justify-between h-[70px] md:h-auto">
+                        <div class="h-full">
+                            <div class="avatar">
+                                <div class="md:w-16 w-12 rounded-full">
+                                    <img
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <h1 class="text-[#313339] text-8xl relative bottom-[53px] right-[25px]">❝</h1>
+                    </div>
+                    <div class="">
+                        <p class="text-[#696B76] italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Inventore ab
+                            velit hic. Aut repellat quasi sequi. Obcaecati consequatur ratione debitis?</p>
+                    </div>
+                    <div class="md:mt-5 mt-3">
+                        <h1 class="md:text-2xl text-lg: text-white">Jhon Smith</h1>
+                        <p class="text-[#696B76] md:block hidden">Codelans Digital</p>
+                        <p class="text-[#696B76] md:hidden text-sm">Codelans Digital</p>
+                    </div>
+                </div>
+                <div class="h-72 w-[450px] rounded-xl border-2 border-borders p-7 hidden md:block">
+                    <div class="flex justify-between">
+                        <div>
+                            <div class="avatar">
+                                <div class="w-16 rounded-full">
+                                    <img
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <h1 class="text-[#313339] text-8xl relative bottom-[53px] right-[25px]">❝</h1>
+                    </div>
+                    <div>
+                        <p class="text-[#696B76] italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Inventore ab
+                            velit hic. Aut repellat quasi sequi. Obcaecati consequatur ratione debitis?</p>
+                    </div>
+                    <div class="mt-5">
+                        <h1 class="text-2xl text-white">Mansur</h1>
+                        <p class="text-[#696B76]">Codelans Digital</p>
+                    </div>
+                </div>
+                <div class="h-72 w-[450px] rounded-xl border-2 border-borders p-7 hidden md:block">
+                    <div class="flex justify-between">
+                        <div>
+                            <div class="avatar">
+                                <div class="w-16 rounded-full">
+                                    <img
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <h1 class="text-[#313339] text-8xl relative bottom-[53px] right-[25px]">❝</h1>
+                    </div>
+                    <div>
+                        <p class="text-[#696B76] italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Inventore ab
+                            velit hic. Aut repellat quasi sequi. Obcaecati consequatur ratione debitis?</p>
+                    </div>
+                    <div class="mt-5">
+                        <h1 class="text-2xl text-white">Sajib Smith</h1>
+                        <p class="text-[#696B76]">Codelans Digital</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class=" flex items-center justify-between md:px-[10%] px-[6%]">
+            <div class="flex w-[80px] gap-3">
+                <p class=" h-[10px] w-[10px] bg-white rounded-full cursor-pointer "></p>
+                <p class=" h-[9px] w-[9px]  rounded-full cursor-pointer bg-[#313339]"></p>
+                <p class=" h-[9px] w-[9px]  rounded-full cursor-pointer bg-[#313339]"></p>
+                <p class=" h-[9px] w-[9px]  rounded-full cursor-pointer bg-[#313339]"></p>
+            </div>
+            <div class="hidden md:block">
+                <div class="text-white text-lg w-[80px] flex justify-between ">
+                    <i class="fa-solid fa-angle-left  cursor-pointer"></i>
+                    <i class="fa-solid fa-angle-right cursor-pointer text-[#696B76]"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <!-- Testimonial ends -->
+
     <!-- FAQ section starts -->
-    <section class="mb-10">
+    <section class="mb-10 mt-20">
         <div class="text-center">
             <h1 class="text-white text-3xl font-bold mb-3">Frequently Asked Questions</h1>
             <p class="text-[#696B76]">online sales tracker that tracks the success of your online sales efforts.</p>
@@ -474,9 +831,15 @@
     </section>
     <!--Company Logo section ends  -->
 
+
     <!-- CTO section starts -->
     <section>
-        <div class="text-center md:w-[60%] w-[90%] mx-auto md:p-10 p-5 bg-custom-bg rounded-xl">
+
+        <div
+            class="text-center md:w-[75%] w-[90%] mx-auto md:p-10 p-5 bg-custom-bg rounded-xl  relative overflow-hidden">
+            <div class="w-[300px] h-[300px] absolute rounded-full bg-[#ffffff0e] ml-[75%] mt-[4%]">
+
+            </div>
             <h1 class="text-white text-3xl font-bold mb-3">Ready to get stared?</h1>
             <p class="text-white mb-5">Sign up to get API keys or request us for a demo</p>
             <div class="flex justify-center gap-5">
@@ -487,19 +850,98 @@
                     <button class="btn btn-outline text-white  pr-8 pl-8">See Pricing</button>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- CTO section ends -->
 
-    <!-- blog section starts -->
-    <section>
-        
+    <!-- blog start -->
+    <section class="h-[500px] overflow-hidden relative mt-20">
+        <div class=" md:h-[450px] h-[420px]">
+            <div>
+                <div class="flex justify-center text-center mb-16">
+                    <div>
+                        <h1 class=" text-3xl text-white font-bold ">Need Help Growing Your Business?</h1>
+                        <p class="text-[#696B76] mt-5 p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                            cupiditate
+                            temporibus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-8 absolute md:pl-[10%] w-full md:w-auto justify-center">
+                    <div class="md:h-54 h-[250px] md:w-[310px] w-[90%]  bg-[#1E2029] rounded-xl">
+                        <div class="flex justify-center p-5 bg-[#282a33] rounded-tl-xl rounded-tr-xl">
+                            <img class=" h-[120px]" src="./Icons/Group 4202.png" alt="">
+                        </div>
+                        <div class=" p-5 bg-[#1e2029] rounded-bl-xl rounded-br-xl">
+                            <p class="text-[#696B76] italic">Lorem ipsum dolor sit, amet consectetur adipisicing
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:block hidden">
+                       <div class="md:h-54 h-[250px] md:w-[310px] w-[90%]  bg-[#1E2029] rounded-xl">
+                        <div class="flex justify-center p-5 bg-[#282a33] rounded-tl-xl rounded-tr-xl">
+                            <img class=" h-[120px]" src="./Icons/Gorup.png" alt="">
+                        </div>
+                        <div class=" p-5 bg-[#1e2029] rounded-bl-xl rounded-br-xl">
+                            <p class="text-[#696B76] italic">Lorem ipsum dolor sit, amet consectetur adipisicing
+                            </p>
+                        </div>
+                    </div> 
+                    </div>
+                    <div class="md:block hidden">
+                        <div class="md:h-54 w-[200px] md:w-[310px] w-[90%]  bg-[#1E2029] rounded-xl">
+                            <div class="flex justify-center p-5 bg-[#282a33] rounded-tl-xl rounded-tr-xl">
+                                <img class="h-[120px]" src="./Icons/Group 4201.png" alt="">
+                            </div>
+                            <div class=" p-5 bg-[#1e2029] rounded-bl-xl rounded-br-xl">
+                                <p class="text-[#696B76] italic">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:block hidden">
+                        <div class="md:h-54 h-[250px] md:w-[310px] w-[90%]  bg-[#1E2029] rounded-xl">
+                            <div class="flex justify-center p-5 bg-[#282a33] rounded-tl-xl rounded-tr-xl">
+                                <img class="h-[120px]" src="./Icons/Group 4202.png" alt="">
+                            </div>
+                            <div class=" p-5 bg-[#1e2029] rounded-bl-xl rounded-br-xl">
+                                <p class="text-[#696B76] italic">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+              
+
+            </div>
+            
+        </div>
+
+
+        <div class=" flex items-center justify-between md:px-[10%] px-[6%] mt-[50px] md:mt-0">
+            <div class="flex w-[80px] gap-3">
+                <p class=" h-[10px] w-[10px] bg-white rounded-full cursor-pointer "></p>
+                <p class=" h-[9px] w-[9px]  rounded-full cursor-pointer bg-[#313339]"></p>
+                <p class=" h-[9px] w-[9px]  rounded-full cursor-pointer bg-[#313339]"></p>
+                <p class=" h-[9px] w-[9px]  rounded-full cursor-pointer bg-[#313339]"></p>
+            </div>
+            <div class="hidden md:block">
+                <div class="text-white text-lg w-[80px] flex justify-between ">
+                    <i class="fa-solid fa-angle-left  cursor-pointer"></i>
+                    <i class="fa-solid fa-angle-right cursor-pointer text-[#696B76]"></i>
+                </div>
+            </div>
+
+        </div>
+
 
     </section>
-    <!-- blog section ends -->
+    <!-- blog ends -->
 
     <!-- footer starts -->
-    <footer>
+    <footer class="">
         <div class="md:flex w-full justify-evenly p-5 mt-14">
             <div class="md:mr-20">
                 <h4 class="text-white text-2xl font-bold">Nettracking</h6>
@@ -542,5 +984,4 @@
     </footer>
     <!-- footer ends -->
 </body>
-
 </html>
