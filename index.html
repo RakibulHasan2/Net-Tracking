@@ -19,8 +19,11 @@
                     },
                     backgroundImage: {
                         'gradient-red': 'radial-gradient(circle, rgba(255, 0, 0, 0.089) 0%, #12141d 60%)',
-                        'gradient-orange': 'linear-gradient(to top right, #dd9172, #f35c45)'
-                    }
+                        'gradient-orange': 'linear-gradient(to top right, #dd9172, #f35c45)',
+                        'custom-bg': "url('/Icons/bg.png')",
+                        'button-background': 'linear-gradient(90deg, #FF7763 100%, #EA6955 100%)'
+                    },
+
                 }
             }
         }
@@ -192,7 +195,8 @@
             <div class="text-center">
                 <h1 class="text-4xl text-white font-bold">Creative solution to expand <br> your business!</h1>
                 <p class="mt-5 text-lg text-[#808188] ">Nettracking is designed with an integrated tracking system that
-                    <br> allows customers to track their package</p>
+                    <br> allows customers to track their package
+                </p>
             </div>
         </div>
         <div class="mt-20 md:flex justify-center gap-5">
@@ -222,7 +226,8 @@
                     Explore Platform <i class="fa-solid fa-arrow-right-long"></i>
                 </button>
             </div>
-            <div class="md:w-[40%] w-[95%] md:mx-0 mx-auto md:h-[530px] rounded-xl bg-gradient-orange flex justify-center p-16 md:mt-0 mt-7">
+            <div
+                class="md:w-[40%] w-[95%] md:mx-0 mx-auto md:h-[530px] rounded-xl bg-gradient-orange flex justify-center p-16 md:mt-0 mt-7">
                 <div>
                     <div class="h-[70px] absolute w-[300px] mt-[25px] rounded-lg bg-[#ffffff] p-4">
                         <h1 class="text-lg font-bold mb-[4px]">Good Morning, Cham</h1>
@@ -252,7 +257,7 @@
         </div>
     </section>
     <!-- What we do end  -->
-    
+
     <!-- Pricing Section Stats -->
     <Section class="mt-10 mb-10">
         <div class="text-center">
@@ -469,8 +474,25 @@
     </section>
     <!--Company Logo section ends  -->
 
+    <!-- CTO section starts -->
+    <section>
+        <div class="text-center md:w-[60%] w-[90%] mx-auto md:p-10 p-5 bg-custom-bg rounded-xl">
+            <h1 class="text-white text-3xl font-bold mb-3">Ready to get stared?</h1>
+            <p class="text-white mb-5">Sign up to get API keys or request us for a demo</p>
+            <div class="flex justify-center gap-5">
+                <div class="p-2 bg-button-background rounded-xl">
+                    <button class="btn pr-10 pl-10">Sign up</button>
+                </div>
+                <div class="bg-button-background rounded-xl p-2">
+                    <button class="btn btn-outline text-white  pr-8 pl-8">See Pricing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTO section ends -->
+
     <!-- footer starts -->
-    <footer class="">
+    <footer>
         <div class="md:flex w-full justify-evenly p-5 mt-14">
             <div class="md:mr-20">
                 <h4 class="text-white text-2xl font-bold">Nettracking</h6>
